@@ -1,0 +1,239 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-header {
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 15px;
+  margin-top: -16px;
+}
+
+/* KPI Cards */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.kpi-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-icon-wrap.green { background: #ecfdf5; color: #10b981; }
+.kpi-icon-wrap.blue { background: #eff6ff; color: #3b82f6; }
+.kpi-icon-wrap.orange { background: #fff7ed; color: #f97316; }
+.kpi-icon-wrap.purple { background: #faf5ff; color: #a855f7; }
+
+.kpi-info p {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.kpi-info h3 {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.trend {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trend.positive { color: #10b981; }
+.trend.negative { color: #ef4444; }
+.trend.neutral { color: #94a3b8; }
+
+/* Dashboard Middle (AI + Pie) */
+.dashboard-middle {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* AI Insights */
+.ai-insights {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ai-icon {
+  color: #8b5cf6;
+}
+
+.ai-header h3 {
+  font-size: 18px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insight-item {
+  display: flex;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+.insight-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.insight-dot.blue { background: #3b82f6; }
+.insight-dot.orange { background: #f59e0b; }
+.insight-dot.red { background: #ef4444; }
+
+.insight-item p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.insight-item p strong {
+  color: #1e293b;
+}
+
+/* Charts */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.chart-wrapper {
+  height: 250px;
+  width: 100%;
+}
+
+/* Dashboard Bottom (Area Chart + Table) */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+
+/* Recent Orders Table */
+.recent-orders {
+  display: flex;
+  flex-direction: column;
+}
+
+.ro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ro-header h3 {
+  font-size: 18px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ro-table-wrapper {
+  overflow-x: auto;
+}
+
+.ro-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ro-table th {
+  text-align: left;
+  padding: 12px;
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ro-table td {
+  padding: 16px 12px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ro-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.delivered { background: #ecfdf5; color: #10b981; }
+.status-badge.out-for-delivery { background: #eff6ff; color: #3b82f6; }
+.status-badge.food-processing { background: #fff7ed; color: #f97316; }
+
+@media (max-width: 1200px) {
+  .dashboard-middle, .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}

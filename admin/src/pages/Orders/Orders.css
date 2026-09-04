@@ -1,0 +1,196 @@
+.orders-page {
+  width: 100%;
+}
+
+.orders-header {
+  margin-bottom: 30px;
+}
+
+.orders-header .page-title {
+  margin-bottom: 5px;
+}
+
+.orders-header .subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+.order-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Override glass-panel padding */
+  overflow: hidden;
+  border-top: 4px solid var(--border-color); /* Default border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Status Based Accents */
+.order-card.status-placed { border-top-color: #ff4757; }
+.order-card.status-preparing { border-top-color: #ffa502; }
+.order-card.status-delivery { border-top-color: #1e90ff; }
+.order-card.status-delivered { border-top-color: #2ed573; }
+
+/* Header Section */
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: var(--glass-border);
+}
+
+.order-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-icon {
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.order-id {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.order-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.order-payment-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 107, 26, 0.15);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-glow);
+}
+
+/* Body Section */
+.order-card-body {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+  border-bottom: var(--glass-border);
+}
+
+.order-card-body h4 {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.item-qty {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.order-delivery-section p {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.delivery-address {
+  color: var(--text-muted) !important;
+}
+
+/* Footer Section */
+.order-card-footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.order-total p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.order-total h3 {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.status-select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* Status Dropdown Colors */
+.status-select.status-placed {
+  border-color: #ff4757;
+  color: #ff4757;
+  background: rgba(255, 71, 87, 0.1);
+}
+.status-select.status-preparing {
+  border-color: #ffa502;
+  color: #ffa502;
+  background: rgba(255, 165, 2, 0.1);
+}
+.status-select.status-delivery {
+  border-color: #1e90ff;
+  color: #1e90ff;
+  background: rgba(30, 144, 255, 0.1);
+}
+.status-select.status-delivered {
+  border-color: #2ed573;
+  color: #2ed573;
+  background: rgba(46, 213, 115, 0.1);
+}
+
+@media (max-width: 900px) {
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}

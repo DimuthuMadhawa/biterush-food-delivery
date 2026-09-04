@@ -1,0 +1,289 @@
+.menu-section {
+  padding: 50px 0 30px 0;
+  position: relative;
+}
+
+.menu-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+  gap: 24px;
+}
+
+.menu-kicker {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  letter-spacing: 1.5px;
+  display: block;
+}
+
+.menu-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--text-color);
+  margin-top: 6px;
+  letter-spacing: -0.5px;
+}
+
+.menu-header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Pill search input wrapper */
+.category-search-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 50px;
+  padding: 8px 16px;
+  width: 230px;
+  transition: all 0.3s ease;
+}
+
+.category-search-pill:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(245, 176, 0, 0.2);
+  background: var(--glass-hover);
+}
+
+.search-icon-emoji {
+  font-size: 15px;
+  margin-right: 8px;
+  opacity: 0.65;
+}
+
+.category-search-input {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 500;
+  width: 100%;
+  outline: none;
+}
+
+.category-search-input::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.clear-search-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.clear-search-btn:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* Category Sort select dropdown */
+.category-sort-wrapper {
+  position: relative;
+}
+
+.category-sort-select {
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  color: var(--text-color);
+  padding: 9px 36px 9px 18px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.category-sort-select:hover {
+  border-color: var(--accent-color);
+  background: var(--glass-hover);
+}
+
+.category-sort-wrapper::after {
+  content: "▼";
+  font-size: 9px;
+  color: var(--accent-color);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.all-dishes-pill-btn {
+  background: var(--glass-bg);
+  border: 1.5px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 176, 0, 0.15);
+}
+
+.all-dishes-pill-btn:hover,
+.all-dishes-pill-btn.active {
+  background: var(--accent-color);
+  color: #1a1528;
+  box-shadow: 0 6px 25px rgba(245, 176, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Kapruka Style Food Category Cards Grid (Image 2 Replica) */
+.kapruka-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.kapruka-category-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.35 cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.kapruka-category-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35), 0 0 20px rgba(245, 176, 0, 0.2);
+}
+
+.kapruka-category-card.selected {
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 25px rgba(245, 176, 0, 0.3);
+}
+
+.category-card-image-wrapper {
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  background: #1a1528;
+}
+
+.category-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kapruka-category-card:hover .category-card-img {
+  transform: scale(1.08);
+}
+
+.category-count-badge-corner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(24, 17, 38, 0.85);
+  color: var(--accent-color);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(245, 176, 0, 0.3);
+}
+
+.category-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.category-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.yellow-vertical-bar {
+  width: 4px;
+  height: 20px;
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.category-card-title {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.category-order-btn {
+  background: var(--plum-accent);
+  color: #ffffff;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.category-order-btn:hover {
+  background: var(--accent-color);
+  color: #1a1528;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 176, 0, 0.3);
+}
+
+.btn-fork-icon {
+  font-size: 13px;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .kapruka-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kapruka-category-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .menu-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-title {
+    font-size: 1.8rem;
+  }
+}

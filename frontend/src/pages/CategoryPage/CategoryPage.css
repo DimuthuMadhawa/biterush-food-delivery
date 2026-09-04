@@ -1,0 +1,333 @@
+.category-page {
+  padding: 30px 0 60px 0;
+  min-height: 85vh;
+}
+
+.page-breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.crumb-link {
+  color: var(--text-color);
+  opacity: 0.65;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.crumb-link:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.crumb-sep {
+  opacity: 0.35;
+}
+
+.crumb-current {
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+/* Kapruka Main Page Layout: Left Sidebar + Right Main Products Area */
+.kapruka-items-page-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* 1. Left Sidebar Navigation (Kapruka Style) */
+.kapruka-sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-style);
+  border-radius: 20px;
+  padding: 22px 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar-header {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(245, 176, 0, 0.15);
+}
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text-color);
+  letter-spacing: -0.2px;
+}
+
+.sidebar-breadcrumb {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.55;
+  margin-top: 4px;
+}
+
+.sidebar-breadcrumb .sep {
+  margin: 0 4px;
+  opacity: 0.4;
+}
+
+.sidebar-category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-cat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.sidebar-cat-item:hover {
+  background: rgba(245, 176, 0, 0.12);
+  border-color: rgba(245, 176, 0, 0.25);
+  color: var(--accent-color);
+  transform: translateX(3px);
+}
+
+.sidebar-cat-item.active {
+  background: var(--plum-accent);
+  color: #ffffff;
+  font-weight: 800;
+  border-color: rgba(245, 176, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(60, 36, 96, 0.4);
+}
+
+.sidebar-cat-item.active .sidebar-cat-count {
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+.sidebar-cat-count {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* 2. Right Main Products Showcase Area */
+.kapruka-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kapruka-notice-banner {
+  background: rgba(60, 36, 96, 0.35);
+  border: 1px solid rgba(245, 176, 0, 0.2);
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notice-icon {
+  font-size: 18px;
+}
+
+.notice-text {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-color);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Header Controls Bar */
+.kapruka-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.active-category-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dishes-count-badge {
+  color: var(--accent-color);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.content-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.kapruka-search-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  padding: 6px 14px;
+  width: 210px;
+}
+
+.kapruka-search-pill:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 12px rgba(245, 176, 0, 0.2);
+}
+
+.search-icon {
+  font-size: 13px;
+  margin-right: 6px;
+  opacity: 0.6;
+}
+
+.kapruka-search-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 13px;
+  width: 100%;
+}
+
+.clear-search {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.kapruka-sort-select {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.back-home-btn {
+  background: var(--accent-gradient);
+  color: #1a1528;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.back-home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 176, 0, 0.35);
+}
+
+/* Kapruka 4-Column Product Items Grid */
+.kapruka-food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.no-items-box {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--card-bg);
+  border: 1px dashed rgba(245, 176, 0, 0.2);
+  border-radius: 16px;
+}
+
+.no-items-msg {
+  font-size: 14px;
+  opacity: 0.75;
+  margin-bottom: 16px;
+}
+
+.reset-search-btn {
+  background: var(--accent-color);
+  color: #1a1528;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .kapruka-food-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .kapruka-items-page-layout {
+    flex-direction: column;
+  }
+
+  .kapruka-sidebar {
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .sidebar-category-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .kapruka-food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .sidebar-category-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kapruka-food-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,561 @@
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--plum-accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.navbar-wrapper.scrolled {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 1. Primary Top Search Header */
+.top-header-bar {
+  background: var(--plum-gradient);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-fire-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(245, 176, 0, 0.15);
+  border: 1.5px solid rgba(245, 176, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(245, 176, 0, 0.2);
+}
+
+.logo-emoji {
+  font-size: 20px;
+}
+
+.logo-wordmark {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.logo-gradient {
+  color: var(--accent-color);
+}
+
+/* Global Header Search Bar (Kapruka Style) */
+.header-search-form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 580px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222222;
+  letter-spacing: 0.5px;
+}
+
+.header-search-input::placeholder {
+  color: #888888;
+  font-weight: 500;
+}
+
+.header-search-btn {
+  width: 46px;
+  height: 100%;
+  background: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.header-search-btn:hover {
+  background: #e09b00;
+}
+
+.search-btn-icon {
+  font-size: 16px;
+}
+
+/* Header Right Actions */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-dropdown-item {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.nav-dropdown-item:hover {
+  opacity: 1;
+}
+
+.nav-signin-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-gradient);
+  color: #1a1528;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(245, 176, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.nav-signin-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(245, 176, 0, 0.4);
+}
+
+.user-profile-menu-wrapper {
+  position: relative;
+}
+
+.nav-icon-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 36px;
+  border-radius: 18px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-user-avatar-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-caret {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-left: 2px;
+}
+
+.nav-user-name-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Floating Profile Dropdown Menu */
+.profile-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background: var(--glass-solid);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border-hover);
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-user-header {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dropdown-user-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.dropdown-user-email {
+  font-size: 11px;
+  opacity: 0.65;
+  color: var(--text-color);
+  word-break: break-all;
+}
+
+.dropdown-pts-tag {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent-color);
+  background: rgba(245, 176, 0, 0.12);
+  padding: 3px 8px;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 4px 0;
+}
+
+.dropdown-item {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.85;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  opacity: 1;
+  background: rgba(245, 176, 0, 0.15);
+  color: var(--accent-color);
+}
+
+.dropdown-item.logout-red {
+  color: #ef4444 !important;
+}
+
+.dropdown-item.logout-red:hover {
+  background: rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: rgba(245, 176, 0, 0.15);
+  border: 1px solid rgba(245, 176, 0, 0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(245, 176, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Cart Button */
+.navbar-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 7px 16px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-cart-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-emoji {
+  font-size: 18px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--accent-color);
+  color: #1a1528;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border: 1px solid #ffffff;
+}
+
+.animate-pop {
+  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.cart-total-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 8px;
+}
+
+/* 2. Secondary Navigation Bar */
+.secondary-nav-bar {
+  background: rgba(240, 240, 245, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 6px 0;
+}
+
+[data-theme="dark"] .secondary-nav-bar {
+  background: rgba(28, 20, 45, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.secondary-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.secondary-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.secondary-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sec-nav-info-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-color);
+  background: rgba(245, 176, 0, 0.1);
+  border: 1px solid rgba(245, 176, 0, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.sec-nav-contact-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.sec-nav-contact-link:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* All Categories Dropdown Button (Kapruka style) */
+.all-categories-btn {
+  background: var(--plum-accent);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.all-categories-btn:hover {
+  background: #2a164a;
+}
+
+.hamburger-lines {
+  font-size: 14px;
+}
+
+/* Quick Category Links */
+.quick-category-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.quick-category-links::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-link {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.quick-link:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.link-icon {
+  font-size: 14px;
+}
+
+/* 3. Breadcrumbs Strip */
+.breadcrumbs-strip {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 0;
+  font-size: 11px;
+}
+
+.breadcrumbs-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.crumb {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.crumb.active {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.crumb:hover {
+  color: var(--accent-color);
+}
+
+.crumb-sep {
+  opacity: 0.4;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .header-search-form {
+    max-width: 320px;
+  }
+  
+  .quick-category-links {
+    gap: 16px;
+  }
+
+  .secondary-nav-right {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-search-form {
+    display: none;
+  }
+
+  .breadcrumbs-strip {
+    display: none;
+  }
+
+  .navbar-top-container {
+    gap: 10px;
+  }
+
+  .all-categories-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

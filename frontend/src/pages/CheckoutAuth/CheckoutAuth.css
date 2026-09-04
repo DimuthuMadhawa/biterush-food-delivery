@@ -1,0 +1,466 @@
+/* CheckoutAuth.css - Simple Natural Checkout UI (Kapruka Styling) */
+
+.checkout-auth-page {
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+}
+
+/* Auth Notice Banner (when coming from 'For You' or user account link without account) */
+.auth-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(245, 176, 0, 0.14), rgba(76, 42, 112, 0.12));
+  border: 1.5px solid rgba(245, 176, 0, 0.4);
+  border-radius: 18px;
+  padding: 16px 24px;
+  margin: 0 auto 2.5rem auto;
+  max-width: 960px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.notice-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(245, 176, 0, 0.25);
+  border: 1.5px solid rgba(245, 176, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.notice-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #4c2a70;
+  margin: 0;
+}
+
+[data-theme="dark"] .notice-title {
+  color: var(--accent-color);
+}
+
+.notice-subtitle {
+  font-size: 13px;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 1. Stepper Header matching 2nd image */
+.checkout-stepper-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto 3rem auto;
+}
+
+.stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+
+.stepper-step.active,
+.stepper-step.completed {
+  opacity: 1;
+}
+
+.step-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.stepper-step.completed .step-circle {
+  background: #4c2a70;
+  color: #ffffff;
+}
+
+.stepper-step.active .step-circle {
+  background: #4c2a70;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(76, 42, 112, 0.3);
+}
+
+.step-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.stepper-line {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 8px;
+  margin-bottom: 22px;
+}
+
+.stepper-line.completed,
+.stepper-line.active {
+  background: #4c2a70;
+}
+
+/* 2. Main 2-Column Grid */
+.checkout-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Left Column */
+.auth-left-column {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.step-subtag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary, #64748b);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.auth-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  line-height: 1.18;
+  margin-bottom: 1.2rem;
+}
+
+.purple-title-word {
+  color: #4c2a70;
+}
+
+.auth-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+  margin-bottom: 1.8rem;
+}
+
+/* Natural Inline Security Line */
+.natural-security-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #64748b);
+  flex-wrap: wrap;
+}
+
+.dot-sep {
+  color: #cbd5e1;
+}
+
+/* Right Column */
+.auth-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.options-header {
+  margin-bottom: 0.4rem;
+}
+
+.options-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  margin-bottom: 4px;
+}
+
+.purple-txt {
+  color: #4c2a70;
+}
+
+.options-sub {
+  font-size: 0.88rem;
+  color: var(--text-secondary, #64748b);
+}
+
+/* Natural Cards */
+.natural-auth-card {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+  padding: 20px 24px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.natural-auth-card.email-card {
+  border-color: #4c2a70;
+}
+
+.natural-auth-card.option-button-card {
+  cursor: pointer;
+}
+
+.natural-auth-card.option-button-card:hover {
+  border-color: #4c2a70;
+  box-shadow: 0 6px 20px rgba(76, 42, 112, 0.08);
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.purple-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(76, 42, 112, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.purple-icon-box.guest-box {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.google-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-heading {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.card-subtext {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #64748b);
+}
+
+.cream-pts-badge {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cream-pts-badge-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary, #64748b);
+}
+
+.star-icon {
+  color: #f59e0b;
+}
+
+/* Email Form */
+.email-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color, #f1f5f9);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.natural-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+}
+
+.natural-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #cbd5e1);
+  background: var(--bg-input, #ffffff);
+  color: var(--text-primary, #0f172a);
+  font-size: 0.95rem;
+}
+
+.natural-input:focus {
+  outline: none;
+  border-color: #4c2a70;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #64748b);
+  cursor: pointer;
+}
+
+.purple-member-btn {
+  padding: 11px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #4c2a70;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 4px;
+}
+
+.purple-member-btn:hover {
+  background: #3b205a;
+  transform: translateY(-1px);
+}
+
+.form-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.purple-link {
+  color: #4c2a70;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.purple-link:hover {
+  color: #3b205a;
+  text-decoration: underline;
+}
+
+.link-sep {
+  color: #cbd5e1;
+}
+
+/* Why Sign In */
+.why-sign-in-box {
+  margin-top: 0.5rem;
+}
+
+.why-toggle-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary, #64748b);
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.why-content {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #475569);
+  margin-top: 6px;
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] .checkout-auth-page {
+  --bg-card: #1e1e2e;
+  --bg-input: #11111b;
+  --text-primary: #cdd6f4;
+  --text-secondary: #a6adc8;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .purple-title-word,
+[data-theme='dark'] .purple-txt,
+[data-theme='dark'] .purple-link {
+  color: #b48ead;
+}
+
+[data-theme='dark'] .natural-auth-card.email-card {
+  border-color: #b48ead;
+}
+
+[data-theme='dark'] .purple-member-btn {
+  background: #b48ead;
+  color: #11111b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .checkout-auth-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .auth-main-title {
+    font-size: 2.1rem;
+  }
+}
